@@ -7,9 +7,9 @@ const Logout = () => {
   const navigate = useNavigate();
   const { logout } = useSecurity();
 
-  const handleLogout = () => {
-    logout();
+  const handleLogout = async () => {
     navigate("/");
+    await logout();
   };
 
   return (
